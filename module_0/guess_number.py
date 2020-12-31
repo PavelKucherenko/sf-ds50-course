@@ -23,10 +23,10 @@ def game_core_v3(number, lower_limit=1, upper_limit=100):
             return number, count  # return from loop and function if guessed
         elif number > predict:
             lower = predict  # shift lower limit up
-            predict = math.ceil((predict + upper)/2)
+            predict = math.ceil((predict + upper) / 2)
         elif number < predict:
             upper = predict  # shift upper limit down
-            predict = math.floor((lower + predict)/2)
+            predict = math.floor((lower + predict) / 2)
     else:
         print(f'Sorry, the hidden number={number} is not in the expected range=[{lower_limit},{upper_limit}] :-(')
 
@@ -48,10 +48,5 @@ def score_game(game_core):
     print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
     return score
 
-# for i in range(-1,105):
-#     num, count = game_core_v3(i)
-#     print(f'num={num}, count= {count}')
 
-
-print(f'count={game_core_v3(5)[1]}')
 score_game(game_core_v3)
