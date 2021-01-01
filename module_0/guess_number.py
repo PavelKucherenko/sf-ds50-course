@@ -5,10 +5,11 @@ import math
 
 def game_core_v3(number, lower_limit=1, upper_limit=100):
     """
-    The function takes a hidden number and returns the number of attempts.
+    The function takes a hidden number and its range and returns this number and the count of attempts to success
+    or None if the number was not guessed successfully.
     The number is guessed via "bisection method".
-    Expected count of trials for worth case is log2(upper_limit-lower_limit)
-    where upper_limit and lower_limit are upper and lower limits of the possible number range.
+    Expected count of trials for worth case is about log2(upper_limit-lower_limit)
+    where upper_limit and lower_limit are upper and lower limits of specified number range.
     """
 
     # just not to forget our initial range
@@ -30,7 +31,7 @@ def game_core_v3(number, lower_limit=1, upper_limit=100):
     else:
         print(f'Sorry, the hidden number={number} is not in the expected range=[{lower_limit},{upper_limit}] :-(')
 
-    return None, count  # выход из цикла, если угадали
+    return number, None  # exit with None value for "count to success"
 
 
 def score_game(game_core):
@@ -49,4 +50,5 @@ def score_game(game_core):
     return score
 
 
-score_game(game_core_v3)
+if __name__ == "__main__":
+    score_game(game_core_v3)
