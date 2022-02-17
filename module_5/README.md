@@ -16,7 +16,7 @@ In order to upload large files with parsed and test data to github without using
 /Data/test.zip
 
 # Final metric
-Finally we get ~6% MAPE for our test data and 16.3% MAPE on submission (parsing - 6.02.2022, submission - 16.02.2022).
+Finally we get ~6% MAPE for our test data and 16.2% MAPE on submission (parsing - 6.02.2022, submission - 16.02.2022).
 
 
 
